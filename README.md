@@ -1,6 +1,11 @@
 # Reactjs-User-Notification
 Simple "Message Notification Counter" application using Reactjs + PHP7.1.2.
 
+The amount of unread messages is presented by a message icon combined with a badge, As soon as the user clicks on the message counter icon the counter is reset to 0 and the color is reset.
+If one or more new messages arrive, the counter is refreshed/updated (fade in) to the current message amount, In case the user has opened the web portal in more than one browsertabs, all of them are kept up-to-date.
+
+The react application uses timer to request messages from server every 3 seconds, and saves the counter value in browser localStorage, the REST API, and the timer interval can be configured in notifyfrontend/src/App.js file.
+
 # 1. Backend Project (using PHP7.1.2 running on XAMPP)
 
 - To install XAMPP please follow this link https://www.apachefriends.org/download.html
