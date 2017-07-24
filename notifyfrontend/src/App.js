@@ -11,6 +11,7 @@ class App extends Component {
   }
   
   timer() {
+          //REST API url
           fetch('http://localhost/notifybackend/getDummyMessage.php')
           .then(function(response) {
               return response.json();
@@ -26,6 +27,7 @@ class App extends Component {
           });     
   }
   componentDidMount() {
+      //To change timer interval, change this value and the value at line 39
       setInterval(this.timer.bind(this), 3000);
   }
   reset() {
